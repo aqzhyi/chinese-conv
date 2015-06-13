@@ -1,0 +1,30 @@
+{
+  "name": "chinese-conv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel": "^5.5.7",
+    "chai": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "dev": "npm run build && gulp watch",
+    "build": "gulp clean && gulp build",
+    "test": "mocha --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pleasurazy/chinese-conv.git"
+  },
+  "author": "Pleasurazy <pleasurazy@gmail.com>",
+  "license": "http://wayne-fu.blogspot.com/",
+  "bugs": {
+    "url": "https://github.com/Pleasurazy/chinese-conv/issues"
+  },
+  "homepage": "https://github.com/Pleasurazy/chinese-conv#readme"
+}

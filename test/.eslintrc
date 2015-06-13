@@ -1,0 +1,12 @@
+{
+  "ecmaFeatures": {
+  },
+  "rules": {
+  },
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": false,
+    "mocha": true
+  }
+}
