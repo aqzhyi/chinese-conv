@@ -1,3 +1,21 @@
+# About This
+
+用於 node.js 或瀏覽器之中：簡轉繁，或繁轉簡。
+
+# Install
+
+> shell (node.js)
+
+```shell
+npm install chinese-conv
+```
+
+> shell (jspm for browser)
+
+```shell
+jspm install npm:chinese-conv
+```
+
 # Usage
 
 > ES2015 (browser/node.js)
