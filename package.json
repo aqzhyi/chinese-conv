@@ -1,6 +1,6 @@
 {
   "name": "chinese-conv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "簡轉繁，繁轉簡。Conversion between Traditional and Simplified Chinese",
   "main": "dist/index.js",
   "keywords": [
@@ -12,8 +12,7 @@
     "convert",
     "transform"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^5.5.7",
     "chai": "^3.0.0",
