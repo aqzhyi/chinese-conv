@@ -2564,4 +2564,6 @@ function toTrad(itxt){
 	}
 }
 
-module.exports = toTrad;
+if (typeof module === 'object') {
+	module.exports = toTrad;
+}
