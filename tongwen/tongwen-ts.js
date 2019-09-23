@@ -2930,4 +2930,6 @@ function toSimp(itxt){
 	}
 }
 
-module.exports = toSimp;
+if (typeof module === 'object') {
+	module.exports = toSimp;
+}
