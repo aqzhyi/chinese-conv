@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "簡轉繁，繁轉簡。Conversion between Traditional and Simplified Chinese",
   "main": "dist/index.js",
+  "files": [
+    "**"
+  ],
   "keywords": [
     "Traditional",
     "unicode",
@@ -27,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pleasurazy/chinese-conv.git"
+    "url": "git+https://github.com/aqzhyi/chinese-conv.git"
   },
-  "author": "Pleasurazy <pleasurazy@gmail.com>",
-  "license": "http://wayne-fu.blogspot.com/",
+  "author": "aqzhyi <pleasurazy@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pleasurazy/chinese-conv/issues"
+    "url": "https://github.com/aqzhyi/chinese-conv/issues"
   },
-  "homepage": "https://github.com/Pleasurazy/chinese-conv#readme"
+  "homepage": "https://github.com/aqzhyi/chinese-conv#readme"
 }
