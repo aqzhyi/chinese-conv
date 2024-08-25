@@ -29,7 +29,7 @@
     "vitest": "^2.0.5"
   },
   "scripts": {
-    "dev": "npm run build && gulp watch",
+    "dev": "bun run --watch ./src/index.ts --outdir ./dist",
     "build": "del ./dist && bun build ./src/index.ts --outdir ./dist",
     "test": "vitest run --coverage"
   },
