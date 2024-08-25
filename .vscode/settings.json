@@ -1,0 +1,44 @@
+{
+  //
+  // 錯字偵測
+  "cSpell.enabled": true,
+  "cSpell.words": ["tify", "sify"],
+  "cSpell.flagWords": [],
+  "cSpell.diagnosticLevel": "Information",
+  "cSpell.maxDuplicateProblems": 5,
+  "cSpell.maxNumberOfProblems": 100,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en,en-GB,en-US",
+
+  //
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  //
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  //
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript][comment]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact][comment]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript][comment]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact][comment]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

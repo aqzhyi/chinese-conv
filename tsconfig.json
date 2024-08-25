@@ -1,0 +1,53 @@
+/** also see https://www.totaltypescript.com/tsconfig-cheat-sheet */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "convenient-then-strictest",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUmdGlobalAccess": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "baseUrl": ".",
+    "composite": true, // useful monorepo 告訴TypeScript要發出 .tsbuildinfo 檔案。這告訴TypeScript您的專案是monorepo的一部分，並且有助於快取建構以提高執行速度。
+    "declaration": true, // useful monorepo
+    "declarationMap": true, // useful monorepo
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "inlineSources": true,
+    "isolatedModules": true,
+    "lib": ["dom", "dom.iterable", "esnext", "WebWorker"],
+    "module": "ESNext",
+    "moduleDetection": "force", // 這個選項強制 TypeScript 將所有檔案視為模組。這有助於避免「無法重新宣告區塊範圍變數」的錯誤。
+    "moduleResolution": "Bundler", // 與像 Webpack、Rollup、Babel、SWC 或 ESBuild的工具捆綁，那麼 Bundler 是最佳選擇。
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false, // false: 留著看 callback 會有哪些 props 可以使用
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "pretty": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true, // useful monorepo
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo",
+    "types": ["vitest/globals"],
+    "useDefineForClassFields": true, // 當 target: ESNext 或 ES2020 以上，配置為 true 配合標準的 ECMAScript 的執行階段行為。
+    "useUnknownInCatchVariables": true,
+    "verbatimModuleSyntax": true
+  },
+  "exclude": ["node_modules", "dist"]
+}

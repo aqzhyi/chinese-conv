@@ -1,10 +1,12 @@
 {
   "name": "chinese-conv",
-  "version": "1.1.0",
   "description": "簡轉繁，繁轉簡。Conversion between Traditional and Simplified Chinese",
+  "version": "2.0.0",
+  "type": "module",
+  "packageManager": "bun@1.1.26",
   "main": "dist/index.js",
   "files": [
-    "**"
+    "./dist/**"
   ],
   "keywords": [
     "Traditional",
@@ -15,18 +17,21 @@
     "convert",
     "transform"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "babel": "^5.5.7",
-    "chai": "^3.0.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
-    "mocha": "^2.2.5"
+    "@types/bun": "latest",
+    "@vitest/coverage-v8": "^2.0.5",
+    "bun": "^1.1.26",
+    "del-cli": "^5.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-jsdoc": "^1.3.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vitest": "^2.0.5"
   },
   "scripts": {
     "dev": "npm run build && gulp watch",
-    "build": "gulp clean && gulp build",
-    "test": "mocha --check-leaks"
+    "build": "del ./dist && bun build ./src/index.ts --outdir ./dist",
+    "test": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -37,5 +42,6 @@
   "bugs": {
     "url": "https://github.com/aqzhyi/chinese-conv/issues"
   },
-  "homepage": "https://github.com/aqzhyi/chinese-conv#readme"
+  "homepage": "https://github.com/aqzhyi/chinese-conv#readme",
+  "private": false
 }
