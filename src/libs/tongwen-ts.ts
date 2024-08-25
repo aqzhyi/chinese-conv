@@ -2923,8 +2923,19 @@ const t_2_s = {
  *   expect(text).toBe('星际2职业选手')
  */
 export function sify(text?: null | string) {
+  const isString = typeof text === 'string'
+
+  if (!isString) {
+    console.error(
+      'The expected text signature is undefined | null | string, but an unexpected value was passed in:',
+      typeof text,
+    )
+  }
+
+  let $$text = isString ? text : ''
+
   // biome-ignore lint/suspicious/noControlCharactersInRegex: The current goal is to refactor into TypeScript first.
-  const $$text = text?.replace(/[^\x00-\xFF]/g, replaceFn) || ''
+  $$text = $$text?.replace(/[^\x00-\xFF]/g, replaceFn) || ''
 
   return $$text
 }

@@ -1,6 +1,11 @@
 // src/libs/tongwen-st.ts
 function tify(text) {
-  const $$text = text?.replace(/[^\x00-\xFF]/g, replaceFn) || "";
+  const isString = typeof text === "string";
+  if (!isString) {
+    console.error("The expected text signature is undefined | null | string, but an unexpected value was passed in:", typeof text);
+  }
+  let $$text = isString ? text : "";
+  $$text = $$text?.replace(/[^\x00-\xFF]/g, replaceFn) || "";
   return $$text;
 }
 function replaceFn(char) {
@@ -2551,7 +2556,12 @@ var s_2_t = {
 
 // src/libs/tongwen-ts.ts
 function sify(text) {
-  const $$text = text?.replace(/[^\x00-\xFF]/g, replaceFn2) || "";
+  const isString = typeof text === "string";
+  if (!isString) {
+    console.error("The expected text signature is undefined | null | string, but an unexpected value was passed in:");
+  }
+  let $$text = isString ? text : "";
+  $$text = $$text?.replace(/[^\x00-\xFF]/g, replaceFn2) || "";
   return $$text;
 }
 function replaceFn2(char) {

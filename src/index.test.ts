@@ -1,7 +1,67 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { sify, tify } from './index'
 
 describe('簡繁轉換', () => {
+  it('錯誤處理', () => {
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+    let expectedCallTimes = 0
+
+    /** @ts-expect-error Intentionally causing it to malfunction. */
+    expect(() => tify({})).not.toThrowError()
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('expected text signature'),
+      expect.anything(),
+    )
+    expect(consoleErrorSpy).toBeCalledTimes(++expectedCallTimes)
+
+    /** @ts-expect-error Intentionally causing it to malfunction. */
+    expect(() => tify([])).not.toThrowError()
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('expected text signature'),
+      expect.anything(),
+    )
+    expect(consoleErrorSpy).toBeCalledTimes(++expectedCallTimes)
+
+    /** @ts-expect-error Intentionally causing it to malfunction. */
+    expect(() => tify(new Set())).not.toThrowError()
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('expected text signature'),
+      expect.anything(),
+    )
+    expect(consoleErrorSpy).toBeCalledTimes(++expectedCallTimes)
+
+    /** @ts-expect-error Intentionally causing it to malfunction. */
+    expect(() => tify(new Map())).not.toThrowError()
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('expected text signature'),
+      expect.anything(),
+    )
+    expect(consoleErrorSpy).toBeCalledTimes(++expectedCallTimes)
+
+    /** @ts-expect-error Intentionally causing it to malfunction. */
+    expect(() => tify(new (class Foo {})())).not.toThrowError()
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('expected text signature'),
+      expect.anything(),
+    )
+    expect(consoleErrorSpy).toBeCalledTimes(++expectedCallTimes)
+
+    /** @ts-expect-error Intentionally causing it to malfunction. */
+    expect(() => tify(123)).not.toThrowError()
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('expected text signature'),
+      expect.anything(),
+    )
+    expect(consoleErrorSpy).toBeCalledTimes(++expectedCallTimes)
+
+    consoleErrorSpy.mockRestore()
+
+    //
+    // 以下這裡遵照 ^1 和 ^2 的行為
+    expect(tify(undefined)).toBe('')
+    expect(tify(null)).toBe('')
+  })
+
   it('簡 -> 繁', () => {
     let text = ''
 
