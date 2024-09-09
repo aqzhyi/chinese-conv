@@ -1,9 +1,9 @@
 {
   "name": "chinese-conv",
-  "description": "簡轉繁，繁轉簡。Conversion between Traditional and Simplified Chinese",
+  "description": "很簡單的懶人解決方案，無依賴的，簡轉繁，繁轉簡。A straightforward and effortless solution, dependency-free, for converting Simplified to Traditional and Traditional to Simplified Chinese.",
   "version": "2.1.0",
   "type": "module",
-  "packageManager": "bun@1.1.26",
+  "packageManager": "bun@1.1.27",
   "main": "dist/index.js",
   "files": [
     "./dist/**"
@@ -21,13 +21,13 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/bun": "latest",
     "@vitest/coverage-v8": "^2.0.5",
-    "bun": "^1.1.26",
+    "bun": "^1.1.27",
     "del-cli": "^5.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-jsdoc": "^1.3.0",
     "release-it": "^17.6.0",
     "typescript": "^5.5.4",
-    "vite": "^5.4.2",
+    "vite": "^5.4.3",
     "vitest": "^2.0.5"
   },
   "scripts": {

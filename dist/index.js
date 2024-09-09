@@ -2558,7 +2558,7 @@ var s_2_t = {
 function sify(text) {
   const isString = typeof text === "string";
   if (!isString) {
-    console.error("The expected text signature is undefined | null | string, but an unexpected value was passed in:");
+    console.error("The expected text signature is undefined | null | string, but an unexpected value was passed in:", typeof text);
   }
   let $$text = isString ? text : "";
   $$text = $$text?.replace(/[^\x00-\xFF]/g, replaceFn2) || "";
