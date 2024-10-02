@@ -5472,14 +5472,7 @@ var t_2_s = {
   "\uFE6A": "\uFF05",
   "\uFE6B": "\uFF20"
 };
-
-// src/index.ts
-var src_default = {
-  sify,
-  tify
-};
 export {
   tify,
-  sify,
-  src_default as default
+  sify
 };
