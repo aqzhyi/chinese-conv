@@ -1,3 +1,12 @@
+
+
+## [3.0.1](https://github.com/aqzhyi/chinese-conv/compare/v3.0.0...v3.0.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* build failure issue caused by incorrect paths when importing this package in the app ([599ed38](https://github.com/aqzhyi/chinese-conv/commit/599ed387e84e09f9e57fb74dc39fe08f5ba0876e))
+
 ## [3.0.0](https://github.com/aqzhyi/chinese-conv/compare/v2.1.0...v3.0.0) (2024-10-02)
 
 ## Build
