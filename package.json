@@ -6,6 +6,7 @@
   "packageManager": "bun@1.1.27",
   "exports": {
     ".": "./src/index.ts",
+    "./libs": "./src/libs/**",
     "./dist": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
