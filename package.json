@@ -1,7 +1,7 @@
 {
   "name": "chinese-conv",
   "description": "很簡單的懶人解決方案，無依賴的，簡轉繁，繁轉簡。A straightforward and effortless solution, dependency-free, for converting Simplified to Traditional and Traditional to Simplified Chinese.",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "type": "module",
   "packageManager": "bun@1.1.27",
   "exports": {
