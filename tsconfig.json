@@ -32,9 +32,9 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false, // false: 留著看 callback 會有哪些 props 可以使用
-    "paths": {
-      "~/*": ["src/*"]
-    },
+    // "paths": {
+    //   "~/*": ["src/*"]
+    // },
     "pretty": true,
     "removeComments": false,
     "resolveJsonModule": true,

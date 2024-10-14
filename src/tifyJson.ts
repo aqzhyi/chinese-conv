@@ -1,4 +1,4 @@
-import { tify } from '~/libs/tongwen-st'
+import { tify } from './libs/tongwen-st'
 
 /**
  * Traditional Chinese 繁體化

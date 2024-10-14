@@ -1,5 +1,19 @@
 
 
+## [3.1.2](https://github.com/aqzhyi/chinese-conv/compare/v3.2.0...v3.1.2) (2024-10-14)
+
+
+### Bug Fixes
+
+* the path issue to prevent TypeScript import from failing to build due to internal path problems within this package ([56a1742](https://github.com/aqzhyi/chinese-conv/commit/56a1742ee5ec6120f54d4c4de439ed3398ae9e0f))
+
+## [3.1.1](https://github.com/aqzhyi/chinese-conv/compare/v3.2.0...v3.1.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* the path issue to prevent TypeScript import from failing to build due to internal path problems within this package ([56a1742](https://github.com/aqzhyi/chinese-conv/commit/56a1742ee5ec6120f54d4c4de439ed3398ae9e0f))
+
 ## [3.0.1](https://github.com/aqzhyi/chinese-conv/compare/v3.0.0...v3.0.1) (2024-10-02)
 
 
