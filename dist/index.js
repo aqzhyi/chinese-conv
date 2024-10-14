@@ -5472,7 +5472,13 @@ var t_2_s = {
   "\uFE6A": "\uFF05",
   "\uFE6B": "\uFF20"
 };
+
+// src/tifyJson.ts
+var tifyJson = (text) => {
+  return JSON.parse(tify(JSON.stringify(text)));
+};
 export {
+  tifyJson,
   tify,
   sify
 };

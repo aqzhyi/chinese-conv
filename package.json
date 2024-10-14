@@ -1,7 +1,7 @@
 {
   "name": "chinese-conv",
   "description": "很簡單的懶人解決方案，無依賴的，簡轉繁，繁轉簡。A straightforward and effortless solution, dependency-free, for converting Simplified to Traditional and Traditional to Simplified Chinese.",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "type": "module",
   "packageManager": "bun@1.1.27",
   "exports": {
@@ -44,6 +44,7 @@
     "dev": "bun run --watch ./build.mjs",
     "build": "bun run ./build.mjs",
     "test": "vitest run --coverage",
+    "test.w": "vitest watch",
     "publish": "release-it"
   },
   "repository": {
