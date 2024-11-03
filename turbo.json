@@ -1,0 +1,12 @@
+{
+  "$schema": "https://turbo.build/schema.v2.json",
+  "tasks": {
+    "build": {
+      "cache": true,
+      "persistent": false,
+      "inputs": ["src", "./package.json"],
+      "outputs": ["dist"],
+      "dependsOn": ["^build", "tsc", "test:coverage"]
+    }
+  }
+}
