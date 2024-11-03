@@ -26,6 +26,7 @@
     "transform"
   ],
   "devDependencies": {
+    "@types/node": "20.17.6",
     "@vitest/coverage-v8": "2.1.4",
     "del-cli": "6.0.0",
     "lefthook": "1.8.2",
