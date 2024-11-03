@@ -1,24 +1,56 @@
-# About This
+# chinese-conv 無依賴的 簡繁轉換
 
-Simplified to traditional, or traditional to simplified.
+> [!NOTE]
+>
+> 我就懶，無依賴的，簡繁轉換解決方案。
+>
+> no dependencies, converting simplified to traditional and traditional to simplified
 
-簡轉繁，或繁轉簡。
+---
+
+> [!IMPORTANT]
+>
+> 單純地一對一字符，字典互換，並且字典年代久遠窩都沒有更新
+>
+> 但這包窩私人偶爾會使用，我需求不多，堪用了
+>
+> 如果你需要 「異體字轉換、地區習慣用詞轉換」 請參考 [opencc](https://www.npmjs.com/package/opencc)
+
+> [!IMPORTANT]
+>
+> just a simple one-to-one character swap, and the dictionary hasn't been updated for a long time
+>
+> but this private space is used occasionally, I don't need much, it's enough
+>
+> if you need "variant character conversion and regional term conversion," please refer to [opencc](https://www.npmjs.com/package/opencc)
+
+---
 
 # Install
 
-`bun add chinese-conv -S`
+```sh
+# bun
+pnpm add chinese-conv
 
-or
+# or...
+bun add chinese-conv
+yarn add chinese-conv
+npm add chinese-conv
+```
 
-`pnpm add chinese-conv -S`
+# Usage
 
-, etc..
+```ts
+// ESM
+import { tify, sify, tifyJson } from 'chinese-conv'
+
+// or...
+import { tify, sify, tifyJson } from 'chinese-conv/dist'
+```
 
 # Methods
 
 ## tifyJson 繁體化整個 js#Array 或 js#Object
-
-![](./static/tifyJson-jsdoc.png)
 
 ```ts
 import { tifyJson } from 'chinese-conv'
@@ -41,8 +73,6 @@ expect(tifyJson(chsAsObject)).toEqual(chtAsObject)
 
 ## tify 繁體化字串
 
-![](./static/tify-jsdoc.png)
-
 ```ts
 import { tify, sify } from 'chinese-conv'
 
@@ -53,8 +83,6 @@ const text = tify(
 ```
 
 ## sify 簡體化字串
-
-![](./static/sify-jsdoc.png)
 
 ```ts
 import { tify, sify } from 'chinese-conv'

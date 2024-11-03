@@ -16,12 +16,12 @@ const overrides = {
       options: { parser: 'typescript' },
     },
     {
-      files: ["*.json"],
-      options: { parser: "json" },
+      files: ['*.json'],
+      options: { parser: 'json' },
     },
     {
-      files: ["**/package.json"],
-      options: { parser: "json-stringify" },
+      files: ['**/package.json'],
+      options: { parser: 'json-stringify' },
     },
     {
       files: '*.vue',

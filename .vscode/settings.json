@@ -2,7 +2,7 @@
   //
   // 錯字偵測
   "cSpell.enabled": true,
-  "cSpell.words": ["tify", "sify"],
+  "cSpell.words": ["tify", "sify", "conv"],
   "cSpell.flagWords": [],
   "cSpell.diagnosticLevel": "Information",
   "cSpell.maxDuplicateProblems": 5,
