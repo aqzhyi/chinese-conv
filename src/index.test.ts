@@ -1,6 +1,5 @@
+import { sify, tify, tifyJson } from 'chinese-conv'
 import { describe, expect, it, vi } from 'vitest'
-import { tifyJson } from '~/tifyJson'
-import { sify, tify } from './index'
 
 describe('簡繁轉換', () => {
   it('Handling js#array.', () => {
