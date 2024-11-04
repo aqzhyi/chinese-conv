@@ -37,5 +37,7 @@
 pre-push:
   follow: true
   commands:
-    build-check:
-      run: turbo run build
+    check-build:
+      run: npx turbo run build
+    lint-packagejson:
+      run: npx publint

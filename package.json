@@ -6,10 +6,9 @@
   "packageManager": "pnpm@8.10.0",
   "exports": {
     ".": "./src/index.ts",
-    "./libs": "./src/libs/**",
     "./dist": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "files": [
