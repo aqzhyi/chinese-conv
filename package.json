@@ -3,7 +3,7 @@
   "description": "我就懶，無依賴的，簡繁轉換解決方案。very simple solution for lazy people, no dependencies, converting simplified to traditional and traditional to simplified.",
   "version": "3.2.1",
   "type": "module",
-  "packageManager": "pnpm@8.10.0",
+  "packageManager": "pnpm@9.14.2",
   "exports": {
     ".": "./src/index.ts",
     "./dist": {
@@ -25,7 +25,7 @@
     "transform"
   ],
   "devDependencies": {
-    "@types/node": "20.17.6",
+    "@types/node": "22.9.4",
     "@vitest/coverage-v8": "2.1.4",
     "del-cli": "6.0.0",
     "lefthook": "1.8.2",
