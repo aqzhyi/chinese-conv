@@ -26,6 +26,10 @@
 
 ---
 
+# Example
+
+[https://codesandbox.io/p/devbox/chinese-conv-tyrsvs](https://codesandbox.io/p/devbox/chinese-conv-tyrsvs?file=%2Fsrc%2Fpages%2Findex.astro)
+
 # Install
 
 ```sh
