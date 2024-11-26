@@ -38,6 +38,7 @@
     "vitest": "2.1.4"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "prepare": "lefthook install",
     "dev": "vite build -w",
     "build": "vite build",
