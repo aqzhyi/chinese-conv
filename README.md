@@ -1,4 +1,26 @@
-# chinese-conv 無依賴的 簡繁轉換
+<p align="center">
+    <img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/96/external-readme-is-a-easy-to-build-a-developer-hub-that-adapts-to-the-user-logo-regular-tal-revivo.png" align="center" width="30%">
+</p>
+<p align="center"><h1 align="center">CHINESE-CONV</h1></p>
+<p align="center">
+	<em><code>❯ pnpm add chinese-conv 無依賴的 簡繁轉換工具</code></em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/aqzhyi/chinese-conv?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/aqzhyi/chinese-conv?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/aqzhyi/chinese-conv?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/aqzhyi/chinese-conv?style=flat&color=0080ff" alt="repo-language-count">
+</p>
+<p align="center">Built with the tools and technologies:</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/npm-CB3837.svg?style=flat&logo=npm&logoColor=white" alt="npm">
+	<img src="https://img.shields.io/badge/Prettier-F7B93E.svg?style=flat&logo=Prettier&logoColor=black" alt="Prettier">
+	<img src="https://img.shields.io/badge/Vitest-6E9F18.svg?style=flat&logo=Vitest&logoColor=white" alt="Vitest">
+	<img src="https://img.shields.io/badge/Turbo-5CD8E5.svg?style=flat&logo=Turbo&logoColor=black" alt="Turbo">
+	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=TypeScript&logoColor=white" alt="TypeScript">
+	<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=flat&logo=Vite&logoColor=white" alt="Vite">
+</p>
+<br>
 
 > [!NOTE]
 >
