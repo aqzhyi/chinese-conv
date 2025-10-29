@@ -7,27 +7,7 @@ export default defineConfig({
     dts({
       rollupTypes: true,
       outDir: 'dist',
-      include: ['src/**/*'],
-      emitDtsFiles: true,
-      beforeWriteFile: (filePath, content) => {
-        // Create .d.cts copy for CJS require condition
-        if (filePath.endsWith('.d.ts') && !filePath.includes('.d.mts')) {
-          return [
-            {
-              filePath: filePath,
-              content: content
-            },
-            {
-              filePath: filePath.replace('.d.ts', '.d.cts'),
-              content: content
-            }
-          ]
-        }
-        return {
-          filePath: filePath,
-          content: content
-        }
-      }
+      include: ['src/**/*']
     })
   ],
   build: {

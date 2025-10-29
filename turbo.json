@@ -17,13 +17,13 @@
     "test": {
       "cache": true,
       "persistent": false,
-      "inputs": ["src/**", "src/**/*.test.ts"],
+      "inputs": ["src/**"],
       "outputs": ["coverage/**"]
     },
     "test:coverage": {
       "cache": true,
       "persistent": false,
-      "inputs": ["src/**", "src/**/*.test.ts"],
+      "inputs": ["src/**"],
       "outputs": ["coverage/**"]
     }
   }
