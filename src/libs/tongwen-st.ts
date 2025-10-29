@@ -2557,7 +2557,7 @@ const s_2_t = {
  *
  *   expect(text).toBe('星際2職業選手')
  */
-export function tify(text?: null | string) {
+export function tify(text?: null | string): string {
   const isString = typeof text === 'string'
 
   if (!isString) {
@@ -2567,18 +2567,14 @@ export function tify(text?: null | string) {
     )
   }
 
-  let $$text = isString ? text : ''
+  const $$text = isString ? text : ''
 
-  // biome-ignore lint/suspicious/noControlCharactersInRegex: The current goal is to refactor into TypeScript first.
-  $$text = $$text?.replace(/[^\x00-\xFF]/g, replaceFn) || ''
-
-  return $$text
+  return $$text.replace(CHINESE_CHAR_REGEX, replaceFn)
 }
 
-function replaceFn(char: string) {
-  if (char in s_2_t) {
-    return s_2_t[char as keyof typeof s_2_t]
-  }
+// Pre-compiled regex for better performance
+const CHINESE_CHAR_REGEX = /[^\x00-\xFF]/g
 
-  return char
+function replaceFn(char: string): string {
+  return s_2_t[char as keyof typeof s_2_t] ?? char
 }
