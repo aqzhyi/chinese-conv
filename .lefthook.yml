@@ -41,3 +41,5 @@ pre-push:
       run: npx turbo run build
     lint-packagejson:
       run: npx publint
+    test:
+      run: npx turbo run test

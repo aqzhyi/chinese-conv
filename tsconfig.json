@@ -3,6 +3,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "convenient-then-strictest",
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "allowUmdGlobalAccess": true,
@@ -50,6 +51,6 @@
     "useUnknownInCatchVariables": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["src", "./package.json"],
+  "include": ["src/**/*", "./package.json"],
   "exclude": ["node_modules", "dist"]
 }
