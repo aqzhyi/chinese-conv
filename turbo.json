@@ -1,12 +1,30 @@
 {
-  "$schema": "https://turbo.build/schema.v2.json",
+  "$schema": "https://turborepo.com/schema.json",
   "tasks": {
     "build": {
       "cache": true,
       "persistent": false,
-      "inputs": ["src", "./package.json"],
-      "outputs": ["dist"],
-      "dependsOn": ["^build", "tsc", "test:coverage"]
+      "inputs": ["src/**", "package.json", "vite.config.ts"],
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build", "tsc"]
+    },
+    "tsc": {
+      "cache": true,
+      "persistent": false,
+      "inputs": ["src/**", "tsconfig.json"],
+      "outputs": []
+    },
+    "test": {
+      "cache": true,
+      "persistent": false,
+      "inputs": ["src/**"],
+      "outputs": ["coverage/**"]
+    },
+    "test:coverage": {
+      "cache": true,
+      "persistent": false,
+      "inputs": ["src/**"],
+      "outputs": ["coverage/**"]
     }
   }
 }

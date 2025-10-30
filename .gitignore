@@ -7,3 +7,8 @@ node_modules
 coverage
 *.tsbuildinfo
 .turbo
+
+# vscode
+.vscode
+
+dist

@@ -2922,7 +2922,7 @@ const t_2_s = {
  *
  *   expect(text).toBe('星际2职业选手')
  */
-export function sify(text?: null | string) {
+export function sify(text?: null | string): string {
   const isString = typeof text === 'string'
 
   if (!isString) {
@@ -2932,18 +2932,14 @@ export function sify(text?: null | string) {
     )
   }
 
-  let $$text = isString ? text : ''
+  const $$text = isString ? text : ''
 
-  // biome-ignore lint/suspicious/noControlCharactersInRegex: The current goal is to refactor into TypeScript first.
-  $$text = $$text?.replace(/[^\x00-\xFF]/g, replaceFn) || ''
-
-  return $$text
+  return $$text.replace(CHINESE_CHAR_REGEX, replaceFn)
 }
 
-function replaceFn(char: string) {
-  if (char in t_2_s) {
-    return t_2_s[char as keyof typeof t_2_s]
-  }
+// Pre-compiled regex for better performance
+const CHINESE_CHAR_REGEX = /[^\x00-\xFF]/g
 
-  return char
+function replaceFn(char: string): string {
+  return t_2_s[char as keyof typeof t_2_s] ?? char
 }

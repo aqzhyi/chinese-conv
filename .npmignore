@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# Development files
+.vscode/
+.idea/
+*.log
+.DS_Store
+.env*
+
+# Test files
+coverage/
+.nyc_output/
+
+# Source files (only include dist in npm package)
+src/
+*.ts
+!*.d.ts
+
+# Configuration files
+lefthook.yml
+turbo.json
+vite.config.ts
+vitest.config.ts
+tsconfig.json
+
+# Documentation files (keep README and LICENSE)
+!README.md
+!LICENSE
+
+# Git files
+.git/
+.gitignore
