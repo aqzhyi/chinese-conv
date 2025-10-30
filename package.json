@@ -1,7 +1,7 @@
 {
   "name": "chinese-conv",
   "description": "我就懶，無依賴的，簡繁轉換解決方案。very simple solution for lazy people, no dependencies, converting simplified to traditional and traditional to simplified.",
-  "version": "3.2.3",
+  "version": "4.0.0",
   "type": "module",
   "packageManager": "pnpm@10.20.0",
   "exports": {
