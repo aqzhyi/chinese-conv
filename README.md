@@ -3,30 +3,20 @@
 </p>
 <p align="center"><h1 align="center">CHINESE-CONV</h1></p>
 <p align="center">
- <em><code>❯ pnpm add chinese-conv 無依賴的 簡繁轉換工具</code></em>
+  <em><code>$ <b>pnpm add chinese-conv</b> 無依賴的 簡繁轉換工具</code></em>
 </p>
 <p align="center">
- <img src="https://img.shields.io/github/license/aqzhyi/chinese-conv?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
- <img src="https://img.shields.io/github/last-commit/aqzhyi/chinese-conv?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
- <img src="https://img.shields.io/github/languages/top/aqzhyi/chinese-conv?style=flat&color=0080ff" alt="repo-top-language">
- <img src="https://img.shields.io/github/languages/count/aqzhyi/chinese-conv?style=flat&color=0080ff" alt="repo-language-count">
+  <img src="https://img.shields.io/github/license/aqzhyi/chinese-conv?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+  <img src="https://img.shields.io/npm/v/chinese-conv?style=for-the-badge&logo=npm&logoColor=white&label=npm&color=brightgreen" alt="npm-version">
+  <img src="https://img.shields.io/badge/dependencies-0-4a4a4a?style=for-the-badge&logo=npm&logoColor=f69220&color=brightgreen" alt="repo-dependencies-count">
+  <img src="https://img.shields.io/bundlephobia/minzip/chinese-conv?style=for-the-badge&logo=npm&logoColor=f69220&label=Gzipped&color=brightgreen" alt="repo-gzip-size">
 </p>
-<p align="center">Built with the tools and technologies:</p>
-<p align="center">
- <img src="https://img.shields.io/badge/npm-CB3837.svg?style=flat&logo=npm&logoColor=white" alt="npm">
- <img src="https://img.shields.io/badge/Prettier-F7B93E.svg?style=flat&logo=Prettier&logoColor=black" alt="Prettier">
- <img src="https://img.shields.io/badge/Vitest-6E9F18.svg?style=flat&logo=Vitest&logoColor=white" alt="Vitest">
- <img src="https://img.shields.io/badge/Turbo-5CD8E5.svg?style=flat&logo=Turbo&logoColor=black" alt="Turbo">
- <img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=TypeScript&logoColor=white" alt="TypeScript">
- <img src="https://img.shields.io/badge/Vite-646CFF.svg?style=flat&logo=Vite&logoColor=white" alt="Vite">
-</p>
-<br>
 
 > [!NOTE]
 >
 > 我就懶，無依賴的，簡繁轉換解決方案。
 >
-> no dependencies, converting simplified to traditional and traditional to simplified
+> Zero dependencies, converting simplified to traditional and traditional to simplified
 
 ---
 
@@ -48,9 +38,16 @@
 
 ---
 
-# Example
+# Demo
 
-[https://codesandbox.io/p/devbox/chinese-conv-tyrsvs](https://codesandbox.io/p/devbox/chinese-conv-tyrsvs?file=%2Fsrc%2Fpages%2Findex.astro)
+- [codesandbox.io / chinese-conv@^3](https://codesandbox.io/p/devbox/chinese-conv-tyrsvs?file=%2Fsrc%2Fpages%2Findex.astro)
+
+- [codesandbox.io / chinese-conv@^4](https://codesandbox.io/p/devbox/chinese-conv-3-forked-63rzkw?file=%2Fsrc%2Fpages%2Findex.astro)
+
+  <details>
+  <summary>what Demo changes from v3 to v4</summary>
+    <img src='./.static/screenshot-6oaEvmlM--2025-10-31--09-27-49.png' />
+  </details>
 
 # Install
 
