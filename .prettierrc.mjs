@@ -1,5 +1,15 @@
 // @ts-check
 
+/** @type {import('prettier').Config} */
+const overrides = {
+  overrides: [
+    {
+      files: '*.md',
+      options: { parser: 'markdown' },
+    },
+  ],
+}
+
 /** @type {import('prettier').Options} */
 export default {
   plugins: ['prettier-plugin-jsdoc'],
@@ -20,4 +30,5 @@ export default {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
+  ...overrides,
 }
