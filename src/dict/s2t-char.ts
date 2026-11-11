@@ -9,7 +9,7 @@
  */
 /** 此 JS 檔經過修改 (https://github.com/mollykannn/translate-big5-gbk.git) ** */
 
-const s_2_t = {
+export const s2tChars: Readonly<Record<string, string>> = {
   '\u00b7': '\u2027',
   '\u2015': '\u2500',
   '\u2016': '\u2225',
@@ -2547,34 +2547,4 @@ const s_2_t = {
   '\u9f9b': '\u9f95',
   '\u9f9f': '\u9f9c',
   '\ue5f1': '\u3000',
-}
-
-/**
- * Traditional Chinese 繁體化
- *
- * @example
- *   const text = tify('星际2职业选手')
- *
- *   expect(text).toBe('星際2職業選手')
- */
-export function tify(text?: null | string): string {
-  const isString = typeof text === 'string'
-
-  if (!isString) {
-    console.error(
-      'The expected text signature is undefined | null | string, but an unexpected value was passed in:',
-      typeof text,
-    )
-  }
-
-  const $$text = isString ? text : ''
-
-  return $$text.replace(CHINESE_CHAR_REGEX, replaceFn)
-}
-
-// Pre-compiled regex for better performance
-const CHINESE_CHAR_REGEX = /[^\x00-\xFF]/g
-
-function replaceFn(char: string): string {
-  return s_2_t[char as keyof typeof s_2_t] ?? char
 }

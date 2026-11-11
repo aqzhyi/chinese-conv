@@ -1,14 +1,33 @@
-import { tify } from './dict/s2t-char.ts'
+import { createCharConvert, createJsonConvert } from './convert.ts'
+import { s2tChars } from './dict/s2t-char.ts'
+import { t2sChars } from './dict/t2s-char.ts'
 
-/** 把可 JSON 序列化的值（js#Array、js#Object 等）整個交給 `convert` 轉換 */
-export const toJsonConvert =
-  (convert: (text: string) => string) =>
-  <T>(
-    /** The text to be converted. */
-    text: T,
-  ): T => {
-    return JSON.parse(convert(JSON.stringify(text)))
-  }
+const convertS2t = /* @__PURE__ */ createCharConvert(s2tChars)
+const convertT2s = /* @__PURE__ */ createCharConvert(t2sChars)
+
+/**
+ * Traditional Chinese 繁體化
+ *
+ * @example
+ *   const text = tify('星际2职业选手')
+ *
+ *   expect(text).toBe('星際2職業選手')
+ */
+export function tify(text?: null | string): string {
+  return convertS2t(text)
+}
+
+/**
+ * Simplified Chinese 簡體化
+ *
+ * @example
+ *   const text = sify('星際2職業選手')
+ *
+ *   expect(text).toBe('星际2职业选手')
+ */
+export function sify(text?: null | string): string {
+  return convertT2s(text)
+}
 
 /**
  * Traditional Chinese 繁體化
@@ -29,4 +48,4 @@ export const toJsonConvert =
  *
  *   expect(tifyJson(chsAsArray)).toEqual(chtAsArray)
  */
-export const tifyJson = toJsonConvert(tify)
+export const tifyJson = /* @__PURE__ */ createJsonConvert(tify)

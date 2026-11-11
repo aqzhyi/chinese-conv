@@ -1,7 +1,12 @@
 import { describe, expect, it, vi } from 'vitest'
+import * as entry from './phrase.ts'
 import { sify, tify, tifyJson } from './phrase.ts'
 
 describe('詞組優先的簡繁轉換', () => {
+  it('入口只匯出 sify、tify、tifyJson', () => {
+    expect(Object.keys(entry).sort()).toEqual(['sify', 'tify', 'tifyJson'])
+  })
+
   it('簡 -> 繁：依詞組決定一對多字', () => {
     expect(tify('他的头发很干燥')).toBe('他的頭髮很乾燥')
     expect(tify('皇后以后')).toBe('皇后以後')

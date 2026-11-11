@@ -1,5 +1,18 @@
 import { describe, expect, it, vi } from 'vitest'
+import * as entry from './index.ts'
 import { sify, tify, tifyJson } from './index.ts'
+
+describe('主入口公開面', () => {
+  it('只匯出 sify、tify、tifyJson', () => {
+    expect(Object.keys(entry).sort()).toEqual(['sify', 'tify', 'tifyJson'])
+  })
+
+  it('是逐字版：不做詞組判斷與地區用詞轉換', () => {
+    expect(tify('他的头发很干燥')).toBe('他的頭發很干燥')
+    expect(tify('软件')).toBe('軟件')
+    expect(sify('乾隆皇帝的軟體')).toBe('干隆皇帝的软体')
+  })
+})
 
 describe('簡繁轉換', () => {
   it('Handling js#array.', () => {

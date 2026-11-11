@@ -1,9 +1,7 @@
-import { createPhraseConvert } from './convert.ts'
+import { sify as sifyChar, tify as tifyChar } from './char.ts'
+import { createJsonConvert, createPhraseConvert } from './convert.ts'
 import s2tPhrases from './dict/s2t-phrase.json' with { type: 'json' }
 import t2sPhrases from './dict/t2s-phrase.json' with { type: 'json' }
-import { tify as tifyChar } from './dict/s2t-char.ts'
-import { sify as sifyChar } from './dict/t2s-char.ts'
-import { toJsonConvert } from './char.ts'
 
 /**
  * Traditional Chinese 繁體化（詞組優先，含地區用詞）
@@ -31,4 +29,4 @@ export const sify = createPhraseConvert(t2sPhrases, sifyChar)
  * @example
  *   expect(tifyJson({ text: '他的头发' })).toEqual({ text: '他的頭髮' })
  */
-export const tifyJson = toJsonConvert(tify)
+export const tifyJson = createJsonConvert(tify)

@@ -1,5 +1,30 @@
 type ConvertText = (text?: null | string) => string
 
+// Pre-compiled regex for better performance
+const CHINESE_CHAR_REGEX = /[^\x00-\xFF]/g
+
+/**
+ * 建立「逐字」的轉換函式。
+ *
+ * 依 `chars` 把每個非 Latin-1 字元換成對應字元；表中沒有的字元保持原樣。 非字串輸入會以 `console.error` 提示，並視為空字串。
+ */
+export const createCharConvert =
+  (chars: Readonly<Record<string, string>>): ConvertText =>
+  (text) => {
+    const isString = typeof text === 'string'
+
+    if (!isString) {
+      console.error(
+        'The expected text signature is undefined | null | string, but an unexpected value was passed in:',
+        typeof text,
+      )
+    }
+
+    const $$text = isString ? text : ''
+
+    return $$text.replace(CHINESE_CHAR_REGEX, (char) => chars[char] ?? char)
+  }
+
 /**
  * 建立「詞組優先」的轉換函式。
  *
@@ -60,3 +85,13 @@ const groupLengthsByFirst = (keys: readonly string[]): ReadonlyMap<string, reado
     [...grouped].map(([first, lengths]) => [first, [...lengths].sort((a, b) => b - a)]),
   )
 }
+
+/** 把可 JSON 序列化的值（js#Array、js#Object 等）整個交給 `convert` 轉換 */
+export const createJsonConvert =
+  (convert: (text: string) => string) =>
+  <T>(
+    /** The text to be converted. */
+    text: T,
+  ): T => {
+    return JSON.parse(convert(JSON.stringify(text)))
+  }
