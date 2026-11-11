@@ -142,7 +142,7 @@ sify('乾隆皇帝的軟體') // '乾隆皇帝的软件'（主入口：'干隆�
 tifyJson({ text: '他的头发' }) // { text: '他的頭髮' }
 ```
 
-代價：詞組表只在 import `chinese-conv/phrase` 時載入，約增加 gzip 69 KB（ESM 版）。
+代價：詞組表只在 import `chinese-conv/phrase` 時載入，約增加 gzip 66 KB（ESM 版）。
 
 ## 字典來源
 
