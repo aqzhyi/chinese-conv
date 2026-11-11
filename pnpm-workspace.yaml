@@ -1,3 +1,8 @@
+# 供應鏈防護，設定說明見 https://pnpm.io/supply-chain-security
+# 明確設定後 minimumReleaseAgeStrict 預設為 true：發布未滿 1 天（1440 分鐘）的版本一律拒裝，不會退回安裝
+minimumReleaseAge: 1440
+# 套件的發布信任等級（trusted publisher / provenance）比先前版本低時，安裝失敗
+trustPolicy: no-downgrade
 # 只允許下列套件執行 install scripts；未列出者一律不執行，並讓安裝失敗（strictDepBuilds 預設 true）
 allowBuilds:
   lefthook: true
