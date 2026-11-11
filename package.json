@@ -54,7 +54,6 @@
     "@vitest/coverage-v8": "5.1.0",
     "lefthook": "2.2.1",
     "publint": "0.3.25",
-    "turbo": "2.11.10",
     "typescript": "6.0.3",
     "unplugin-dts": "1.1.2",
     "vite": "8.3.7",

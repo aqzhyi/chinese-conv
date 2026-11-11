@@ -25,7 +25,6 @@ src/
 
 # Configuration files
 lefthook.yml
-turbo.json
 vite.config.ts
 vitest.config.ts
 tsconfig.json

@@ -36,10 +36,13 @@
 
 pre-push:
   follow: true
-  commands:
-    check-build:
-      run: pnpm exec turbo run build
-    lint-packagejson:
-      run: pnpm exec publint
-    test:
-      run: pnpm exec turbo run test
+  piped: true
+  jobs:
+    - name: tsc
+      run: pnpm run tsc
+    - name: build
+      run: pnpm run build
+    - name: lint
+      run: pnpm run lint
+    - name: test
+      run: pnpm run test
