@@ -28,7 +28,11 @@
 >
 > 需要「头发 → 頭髮」這類一字多義、或「软件 → 軟體」這類地區用詞時，改用 [`chinese-conv/phrase`](#chinese-convphrase-詞組優先含地區用詞)
 >
-> 如果你需要更完整的「異體字轉換、地區習慣用詞轉換」 請參考 [opencc](https://www.npmjs.com/package/opencc)
+> 如果你需要更完整的「異體字轉換、地區習慣用詞轉換」 請參考 OpenCC 官方列出的套件：
+>
+> - [opencc](https://www.npmjs.com/package/opencc)：Node.js 原生模組，沒有預先編譯版本的平台會在安裝時從原始碼編譯
+> - [opencc-js](https://www.npmjs.com/package/opencc-js)：純 JavaScript，可在瀏覽器使用
+> - [opencc-wasm](https://www.npmjs.com/package/opencc-wasm)：WebAssembly 版本
 
 > [!IMPORTANT]
 >
@@ -38,7 +42,11 @@
 >
 > for phrase-aware conversion (e.g. `头发 → 頭髮`) and regional terms (e.g. `软件 → 軟體`), use [`chinese-conv/phrase`](#chinese-convphrase-詞組優先含地區用詞)
 >
-> if you need more complete "variant character conversion and regional term conversion," please refer to [opencc](https://www.npmjs.com/package/opencc)
+> if you need more complete "variant character conversion and regional term conversion," please refer to the packages listed by OpenCC:
+>
+> - [opencc](https://www.npmjs.com/package/opencc): Node.js native addon, built from source on install where no prebuilt binary exists
+> - [opencc-js](https://www.npmjs.com/package/opencc-js): pure JavaScript, works in browsers
+> - [opencc-wasm](https://www.npmjs.com/package/opencc-wasm): WebAssembly build
 
 ---
 
