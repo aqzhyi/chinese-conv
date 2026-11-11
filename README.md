@@ -22,19 +22,23 @@
 
 > [!IMPORTANT]
 >
-> 單純地一對一字符，字典互換，並且字典年代久遠窩都沒有更新
+> 主入口 `chinese-conv` 單純地一對一字符，字典互換，並且字典年代久遠窩都沒有更新
 >
 > 但這包窩私人偶爾會使用，我需求不多，堪用了
 >
-> 如果你需要 「異體字轉換、地區習慣用詞轉換」 請參考 [opencc](https://www.npmjs.com/package/opencc)
+> 需要「头发 → 頭髮」這類一字多義、或「软件 → 軟體」這類地區用詞時，改用 [`chinese-conv/phrase`](#chinese-convphrase-詞組優先含地區用詞)
+>
+> 如果你需要更完整的「異體字轉換、地區習慣用詞轉換」 請參考 [opencc](https://www.npmjs.com/package/opencc)
 
 > [!IMPORTANT]
 >
-> just a simple one-to-one character swap, and the dictionary hasn't been updated for a long time
+> the main entry `chinese-conv` is just a simple one-to-one character swap, and the dictionary hasn't been updated for a long time
 >
 > but this private space is used occasionally, I don't need much, it's enough
 >
-> if you need "variant character conversion and regional term conversion," please refer to [opencc](https://www.npmjs.com/package/opencc)
+> for phrase-aware conversion (e.g. `头发 → 頭髮`) and regional terms (e.g. `软件 → 軟體`), use [`chinese-conv/phrase`](#chinese-convphrase-詞組優先含地區用詞)
+>
+> if you need more complete "variant character conversion and regional term conversion," please refer to [opencc](https://www.npmjs.com/package/opencc)
 
 ---
 
@@ -68,8 +72,8 @@ npm add chinese-conv
 // ESM
 import { tify, sify, tifyJson } from 'chinese-conv'
 
-// or...
-import { tify, sify, tifyJson } from 'chinese-conv/dist'
+// 詞組優先（含地區用詞），函式名稱與用法相同
+import { tify, sify, tifyJson } from 'chinese-conv/phrase'
 ```
 
 # Methods
@@ -117,6 +121,26 @@ const text = sify(
 )
 ```
 
+## chinese-conv/phrase 詞組優先（含地區用詞）
+
+與主入口相同的 `tify`、`sify`、`tifyJson`，只差在 import 路徑。
+
+從左到右掃描，每個位置優先比對最長的詞組；沒有詞組命中的文字，照主入口的字表逐字轉換。詞組表包含地區用詞，所以輸出會改寫用詞。
+
+```ts
+import { tify, sify, tifyJson } from 'chinese-conv/phrase'
+
+tify('他的头发很干燥') // '他的頭髮很乾燥'（主入口：'他的頭發很干燥'）
+tify('软件鼠标网络内存') // '軟體滑鼠網路記憶體'
+sify('乾隆皇帝的軟體') // '乾隆皇帝的软件'（主入口：'干隆皇帝的软体'）
+
+tifyJson({ text: '他的头发' }) // { text: '他的頭髮' }
+```
+
+代價：詞組表只在 import `chinese-conv/phrase` 時載入，約增加 gzip 69 KB（ESM 版）。
+
 ## 字典來源
 
 <https://github.com/tongwentang/tongwen-dict>
+
+`chinese-conv/phrase` 的詞組表取自 [tongwen-dict](https://www.npmjs.com/package/tongwen-dict) 1.0.2 的 `s2t-phrase.min.json`、`t2s-phrase.min.json`（MIT，授權全文見 [LICENSE-tongwen-dict](./LICENSE-tongwen-dict)），存放於 `src/libs/tongwen-dict/`。

@@ -15,6 +15,16 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./phrase": {
+      "import": {
+        "types": "./dist/phrase.d.ts",
+        "default": "./dist/phrase.js"
+      },
+      "require": {
+        "types": "./dist/phrase.d.cts",
+        "default": "./dist/phrase.cjs"
+      }
+    },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
@@ -23,7 +33,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "LICENSE-tongwen-dict"
   ],
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
@@ -53,7 +64,7 @@
   "scripts": {
     "prepare": "lefthook install",
     "dev": "vite build -w",
-    "build": "vite build && cp dist/index.d.ts dist/index.d.cts",
+    "build": "vite build && cp dist/index.d.ts dist/index.d.cts && cp dist/phrase.d.ts dist/phrase.d.cts",
     "tsc": "tsc --noEmit",
     "tsc:w": "tsc --noEmit --watch --preserveWatchOutput",
     "test": "vitest run",

@@ -12,11 +12,14 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: {
+        index: './src/index.ts',
+        phrase: './src/phrase.ts',
+      },
       name: toCamelCase(packageJson.name),
       formats: ['es', 'cjs'],
-      fileName: (format) => {
-        return format === 'es' ? 'index.js' : `index.cjs`
+      fileName: (format, entryName) => {
+        return format === 'es' ? `${entryName}.js` : `${entryName}.cjs`
       },
     },
     outDir: './dist',

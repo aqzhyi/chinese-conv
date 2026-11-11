@@ -51,6 +51,6 @@
     "useUnknownInCatchVariables": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["src/**/*", "./package.json"],
+  "include": ["src/**/*", "src/**/*.json", "./package.json"],
   "exclude": ["node_modules", "dist"]
 }
