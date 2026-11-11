@@ -1,5 +1,15 @@
 import { tify } from './libs/tongwen-st'
 
+/** 把可 JSON 序列化的值（js#Array、js#Object 等）整個交給 `convert` 轉換 */
+export const toJsonConvert =
+  (convert: (text: string) => string) =>
+  <T>(
+    /** The text to be converted. */
+    text: T,
+  ): T => {
+    return JSON.parse(convert(JSON.stringify(text)))
+  }
+
 /**
  * Traditional Chinese 繁體化
  *
@@ -19,9 +29,4 @@ import { tify } from './libs/tongwen-st'
  *
  *   expect(tifyJson(chsAsArray)).toEqual(chtAsArray)
  */
-export const tifyJson = <T>(
-  /** The text to be converted. */
-  text: T,
-): T => {
-  return JSON.parse(tify(JSON.stringify(text)))
-}
+export const tifyJson = toJsonConvert(tify)
