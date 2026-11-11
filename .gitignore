@@ -7,6 +7,7 @@
 logs
 *log
 node_modules
+.pnpm-store
 coverage
 *.tsbuildinfo
 .turbo
