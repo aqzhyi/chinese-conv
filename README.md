@@ -148,4 +148,6 @@ tifyJson({ text: '他的头发' }) // { text: '他的頭髮' }
 
 <https://github.com/tongwentang/tongwen-dict>
 
-`chinese-conv/phrase` 的詞組表取自 [tongwen-dict](https://www.npmjs.com/package/tongwen-dict) 1.0.2 的 `s2t-phrase.min.json`、`t2s-phrase.min.json`（MIT，授權全文見 [LICENSE-tongwen-dict](./LICENSE-tongwen-dict)），存放於 `src/libs/tongwen-dict/`。
+`chinese-conv/phrase` 的詞組表取自 [tongwen-dict](https://www.npmjs.com/package/tongwen-dict) 1.0.2 的 `s2t-phrase.min.json`、`t2s-phrase.min.json`（MIT，授權全文見 [LICENSE-tongwen-dict](./LICENSE-tongwen-dict)），存放於 `src/dict/s2t-phrase.json`、`src/dict/t2s-phrase.json`。
+
+主入口的逐字對照表存放於 `src/dict/s2t-char.ts`、`src/dict/t2s-char.ts`。依兩個檔案的檔頭聲明：JS 主程式出自[新同文堂](http://tongwen.openfoundry.org/)，存放位置由 WFU Blog 提供，並經 [mollykannn/translate-big5-gbk](https://github.com/mollykannn/translate-big5-gbk) 修改；聲明原文保留在兩個檔案的檔頭。

@@ -1,9 +1,9 @@
-import { createPhraseConvert } from './libs/convert-phrase.ts'
-import s2tPhrases from './libs/tongwen-dict/s2t-phrase.json' with { type: 'json' }
-import t2sPhrases from './libs/tongwen-dict/t2s-phrase.json' with { type: 'json' }
-import { tify as tifyChar } from './libs/tongwen-st.ts'
-import { sify as sifyChar } from './libs/tongwen-ts.ts'
-import { toJsonConvert } from './tifyJson.ts'
+import { createPhraseConvert } from './convert.ts'
+import s2tPhrases from './dict/s2t-phrase.json' with { type: 'json' }
+import t2sPhrases from './dict/t2s-phrase.json' with { type: 'json' }
+import { tify as tifyChar } from './dict/s2t-char.ts'
+import { sify as sifyChar } from './dict/t2s-char.ts'
+import { toJsonConvert } from './char.ts'
 
 /**
  * Traditional Chinese 繁體化（詞組優先，含地區用詞）

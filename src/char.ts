@@ -1,4 +1,4 @@
-import { tify } from './libs/tongwen-st'
+import { tify } from './dict/s2t-char.ts'
 
 /** 把可 JSON 序列化的值（js#Array、js#Object 等）整個交給 `convert` 轉換 */
 export const toJsonConvert =
