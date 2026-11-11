@@ -10,7 +10,6 @@
     "allowUnreachableCode": true,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
-    "baseUrl": ".",
     "composite": true, // useful monorepo 告訴TypeScript要發出 .tsbuildinfo 檔案。這告訴TypeScript您的專案是monorepo的一部分，並且有助於快取建構以提高執行速度。
     "declaration": true, // useful monorepo
     "declarationMap": true, // useful monorepo

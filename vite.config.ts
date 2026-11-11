@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import dts from 'unplugin-dts/vite'
 import packageJson from './package.json' with { type: 'json' }
 
 export default defineConfig({
   plugins: [
     dts({
-      rollupTypes: true,
+      bundleTypes: true,
       outDir: 'dist',
       include: ['src/**/*']
     })
@@ -24,12 +24,12 @@ export default defineConfig({
     },
     outDir: './dist',
     sourcemap: true,
-    rollupOptions: {
-      external: [],
+    rolldownOptions: {
       output: {
-        globals: {}
-      }
-    }
+        // Rolldown 預設 'auto' 不在 CJS 產物輸出 "use strict"；設 true 維持 Vite 7（Rollup）時期 CJS 的 strict mode 語意
+        strict: true,
+      },
+    },
   },
 })
 
