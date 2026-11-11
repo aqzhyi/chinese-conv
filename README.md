@@ -52,14 +52,11 @@
 
 # Demo
 
-- [codesandbox.io / chinese-conv@^3](https://codesandbox.io/p/devbox/chinese-conv-tyrsvs?file=%2Fsrc%2Fpages%2Findex.astro)
+- [stackblitz.com / chinese-conv@^3](https://stackblitz.com/edit/nextjs-zvncq15h?file=app%2Fpage.js)
 
-- [codesandbox.io / chinese-conv@^4](https://codesandbox.io/p/devbox/chinese-conv-3-forked-63rzkw?file=%2Fsrc%2Fpages%2Findex.astro)
+- [stackblitz.com / chinese-conv@^4](https://stackblitz.com/edit/nextjs-lfut4ymf?file=app%2Fpage.js)
 
-  <details>
-  <summary>what Demo changes from v3 to v4</summary>
-    <img src='./.static/screenshot-6oaEvmlM--2025-10-31--09-27-49.png' />
-  </details>
+- [stackblitz.com / chinese-conv@^4.1.0](https://stackblitz.com/edit/nextjs-rasmfd9y?file=app%2Fpage.js)
 
 # Install
 
